@@ -3,9 +3,9 @@ FROM rocker/ropensci:latest
 LABEL maintainer "vera.josemanuel@gmail.com"
 
 # Install rstan
-# RUN install2.r --error --deps TRUE \
-#    rstan \
-#    && rm -rf /tmp/downloaded_packages/ /tmp/*.rds
+ RUN install2.r --error --deps TRUE \
+    rstan \
+    && rm -rf /tmp/downloaded_packages/ /tmp/*.rds
 
 # Global site-wide config -- neeeded for building packages
 RUN mkdir -p $HOME/.R/ \
